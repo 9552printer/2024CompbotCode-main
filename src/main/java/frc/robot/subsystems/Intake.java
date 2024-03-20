@@ -55,23 +55,23 @@ public class Intake extends SubsystemBase{
 
   public void runIntake() {
      
-    intakeMotor1.setInverted(true);  
-    Commands.startEnd(
-        () -> {
-            intakeMotor1.set(1);
-        }, () -> {
-            intakeMotor1.set(0);
-        }, this); 
+    intakeMotor1.set(-1);
    // intakeMotor1.set(Constants.intake.intakeSpeed);
     }
+
+    public void runIntakeBackwards(){
+        intakeMotor1.set(1);
+    }
+
     
-public void Outtake() {
-        intakeMotor1.setInverted(false);
+    public void Outtake() {
+
         intakeMotor1.set(Constants.intake.outtakeSpeed);
     }
 
     public void stopIntake(){
         intakeMotor1.set(0);
     }
+
 
 }

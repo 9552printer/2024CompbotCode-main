@@ -13,12 +13,10 @@ public class ClimbingArm extends SubsystemBase {
     //private final RelativeEncoder Motor1Encoder = Motor1.getEncoder();
 
     public void ArmUp() {
-        Motor1.setInverted(true);
         Motor1.set(Constants.Climber.MotorUp);
     }
 
     public void ArmDown() {
-        Motor1.setInverted(false);
         Motor1.set(Constants.Climber.MotorDown);
     }
 

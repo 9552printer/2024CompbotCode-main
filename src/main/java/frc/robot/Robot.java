@@ -97,8 +97,7 @@ public class Robot extends TimedRobot {
       manipulatorJoystick.rightBumper().whileTrue(new OuttakeCom(intake));
       manipulatorJoystick.leftBumper().whileTrue(new revAmp(shooter));
       
-      manipulatorJoystick.leftTrigger().onFalse(new stopFly(shooter)); // this stops the shooter but makes the intake not work
-      manipulatorJoystick.leftBumper().onFalse(new stopFly(shooter));
+ 
       //manipulatorJoystick.rightTrigger().onFalse(new stopIntake(intake));
       //manipulatorJoystick.rightBumper().onFalse(new stopIntake(intake));
       

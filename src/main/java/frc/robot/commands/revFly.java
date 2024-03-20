@@ -15,5 +15,10 @@ public class revFly extends Command{
         shooter.runFlyForSpeaker();
     }
 
+    @Override
+    public void end(boolean wasInterupted){
+        shooter.stopShoot();
+    }
+
 
 }

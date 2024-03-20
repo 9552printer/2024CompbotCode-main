@@ -72,7 +72,7 @@ public final class Constants {
     public static final class Climber{
 
         public static final double MotorUp = 0.2;
-        public static final double MotorDown = 0.2;
+        public static final double MotorDown = -0.2;
 
         public static final int ClimberMotor=8;
     }
