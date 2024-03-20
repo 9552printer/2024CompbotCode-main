@@ -17,5 +17,10 @@ public class ClimbUp extends Command{
         cArm.ArmUp();
     }
 
+    @Override
+    public void end(boolean wasInterupted){
+        cArm.stop();
+    }
+
 
 }

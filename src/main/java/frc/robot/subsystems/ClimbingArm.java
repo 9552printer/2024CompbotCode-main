@@ -20,5 +20,9 @@ public class ClimbingArm extends SubsystemBase {
         Motor1.set(Constants.Climber.MotorDown);
     }
 
+    public void stop(){
+        Motor1.set(0);
+    }
+
 
 }
