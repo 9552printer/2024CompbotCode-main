@@ -8,6 +8,7 @@ package frc.robot.AutoRoutines;
 import edu.wpi.first.wpilibj2.command.ParallelCommandGroup;
 import edu.wpi.first.wpilibj2.command.ParallelRaceGroup;
 import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
+import edu.wpi.first.wpilibj2.command.WaitCommand;
 import frc.robot.subsystems.DriveBase;
 import frc.robot.subsystems.Intake;
 import frc.robot.subsystems.Shooter;
@@ -26,12 +27,16 @@ public class DriveForward extends SequentialCommandGroup {
    */
   public DriveForward(DriveBase drive, Intake intake, Shooter shooter) {
     super(
-      new shootShooter(shooter, intake),
       new ParallelRaceGroup(
-        new DriveStraight(drive, 3.6576),
-        new intake(intake)),
-      new DriveStraight(drive, -3.6576),
-      new shootShooter(shooter, intake)
+        new revFly(shooter),
+        new WaitCommand(2)
+      ),
+      new ParallelRaceGroup(
+        new OuttakeCom(intake),
+        new revFly(shooter),
+        new WaitCommand(1)
+      )
+
     );
   }
 }

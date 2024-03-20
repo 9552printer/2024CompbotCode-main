@@ -19,4 +19,10 @@ public class OuttakeCom extends Command{
     }
 
 
+    @Override
+    public void end(boolean wasInterupted){
+        intake.stopIntake();
+    }
+
+
 }

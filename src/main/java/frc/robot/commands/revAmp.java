@@ -15,5 +15,10 @@ public class revAmp extends Command{
         shooter.runFlyForAmp();
     }
 
+    @Override
+    public void end(boolean wasInterupted){
+        shooter.stopShoot();
+    }
+
 
 }

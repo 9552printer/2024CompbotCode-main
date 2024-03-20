@@ -19,5 +19,10 @@ public class intake extends Command{
         //return intake.getBeamBreak();
     }*/
 
+    @Override
+    public void end(boolean wasInterupted){
+        intake.stopIntake();
+    }
+
 } 
 

@@ -17,4 +17,9 @@ public class ClimbDown extends Command{
         cArm.ArmDown();
     }
 
+    @Override
+    public void end(boolean wasInterupted){
+        cArm.stop();
+    }
+
 }
